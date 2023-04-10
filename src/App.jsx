@@ -1,6 +1,7 @@
 import './App.css'
 import { authenticate } from './Services/API/auth/auth.js';
 import { useEffect } from 'react';
+import { Dashboard } from './Pages';
 
 function App() {
   useEffect(() => {
@@ -13,9 +14,7 @@ function App() {
         });
   },[])
   return (
-    <h1 className="text-3xl font-bold underline">
-      {import.meta.env.MODE}
-    </h1>
+    <Dashboard />
   )
 }
 
