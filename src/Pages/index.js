@@ -1,5 +1,1 @@
-import Dashboard from "./Dashboard/Dashboard";
-
-export {
-  Dashboard
-}
+export { default as Dashboard} from "./Dashboard/Dashboard";

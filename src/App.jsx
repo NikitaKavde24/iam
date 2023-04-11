@@ -1,21 +1,22 @@
-import './App.css'
-import { authenticate } from './Services/API/auth/auth.js';
-import { useEffect } from 'react';
-import { Dashboard } from './Pages';
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import { PrivateRoute } from "./Components/Atoms";
+import { Base } from "./Components/Templates/";
+import { Dashboard } from "./Pages";
+
+const RouterConfig = () => (
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<PrivateRoute />}>
+        <Route element={<Base />}>
+        <Route path="/" element={<Dashboard />}/>
+        </Route>
+      </Route>
+    </Routes>
+  </BrowserRouter>
+);
 
 function App() {
-  useEffect(() => {
-    authenticate("eamil.com","123")
-        .then((res) => {
-          console.log(res)
-        })
-        .catch((error) => {
-         console.log(error)
-        });
-  },[])
-  return (
-    <Dashboard />
-  )
+  return <RouterConfig />;
 }
 
-export default App
+export default App;

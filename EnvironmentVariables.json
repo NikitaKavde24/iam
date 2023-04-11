@@ -1,4 +1,4 @@
 {
   "serverURL": "http://localhost:8000",
-  "apiURL": "/api/v2"
+  "apiURL": "/activitymanagement"
 }

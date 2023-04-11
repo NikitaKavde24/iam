@@ -8,8 +8,6 @@ const api = axios.create({
     MODE === "development" ? `${ENV.serverURL}${ENV.apiURL}` : `${ENV.apiURL}`,
   headers: {
     "content-type": "application/json",
-    "Accept-Language": "en-us",
-    "Access-Control-Allow-Origin": "*",
   },
   timeout: 30000,
 });
