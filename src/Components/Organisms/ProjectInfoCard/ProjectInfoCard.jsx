@@ -1,0 +1,65 @@
+import { ProjectInfoCardContainer } from "./ProjectInfoCard.style";
+import { UserStack } from "../../Molecules";
+const ProjectInfoCard = () => {
+  return (
+    <ProjectInfoCardContainer>
+      <div className="mb-1 text-3xl font-semibold text-iamblack">
+        Project Xpress
+      </div>
+      <div className="mb-3 text-xs text-iamblack-50">Created on 01/01/2023</div>
+      <div>
+        <UserStack
+          usersData={Data}
+        ></UserStack>
+      </div>
+    </ProjectInfoCardContainer>
+  );
+};
+
+export default ProjectInfoCard;
+
+//   <PrimaryButton> Add User</PrimaryButton>
+
+
+const Data = [
+  "cleverkitten",
+  "techguru23",
+  "naturelover88",
+  "musicjunkie12",
+  "bookworm42",
+  "foodiegalore",
+  "adventureseeker99",
+  "fitnessfanatic7",
+  "wanderlust22",
+  "artofwords11",
+  "cleverkitten",
+  "techguru23",
+  "naturelover88",
+  "cleverkitten",
+  "techguru23",
+  "naturelover88",
+  "musicjunkie12",
+  "bookworm42",
+  "foodiegalore",
+  "adventureseeker99",
+  "fitnessfanatic7",
+  "wanderlust22",
+  "artofwords11",
+  "cleverkitten",
+  "techguru23",
+  "naturelover88",
+  "musicjunkie12",
+  "bookworm42",
+  "foodiegalore",
+  "adventureseeker99",
+  "fitnessfanatic7",
+  "wanderlust22",
+  "artofwords11",
+  "musicjunkie12",
+  "bookworm42",
+  "foodiegalore",
+  "adventureseeker99",
+  "fitnessfanatic7",
+  "wanderlust22",
+  "artofwords11",
+]

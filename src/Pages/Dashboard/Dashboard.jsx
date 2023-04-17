@@ -1,11 +1,17 @@
 import React from "react";
-import { Button } from "../../Components/Atoms";
+import { PrimaryButton, Table, Card, Tiles } from "../../Components/Atoms";
+import { ProjectInfoCard } from "../../Components/Organisms";
 
 function Dashboard() {
   return (
     <div>
-      Dashboard
-      <Button>button 1</Button>
+      <Card className="flex flex-row">
+       <ProjectInfoCard />
+        <Tiles />
+      </Card>
+      <Card>
+        <Table />
+      </Card>
     </div>
   );
 }
