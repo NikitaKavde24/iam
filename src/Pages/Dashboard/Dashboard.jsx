@@ -1,5 +1,6 @@
 import React from "react";
 import { PrimaryButton, Table, Card, Tiles } from "../../Components/Atoms";
+import CustomAreaChart from "../../Components/Molecules/AreaChart/AreaChart";
 import { ProjectInfoCard, ProjectStats } from "../../Components/Organisms";
 import formatTaskData from "../../Helpers/formatTaskData";
 
@@ -9,6 +10,7 @@ function Dashboard() {
       <Card className="flex flex-row">
         <ProjectInfoCard className="mr-24"/>
         <ProjectStats data={data && formatTaskData(data)}/>
+        <CustomAreaChart />
       </Card>
       <Card>
         <Table />
