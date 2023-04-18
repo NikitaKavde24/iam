@@ -4,7 +4,7 @@ const ProjectInfoCard = ({className}) => {
   return (
     <ProjectInfoCardContainer className={className}>
       <div className="mb-1 text-3xl font-semibold text-iamblack">
-        Project Name Here
+        Project Name 
       </div>
       <div className="mb-3 text-xs text-iamblack-50">Created on 01/01/2023</div>
       <div>

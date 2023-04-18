@@ -12,8 +12,8 @@ function Dashboard() {
   return (
     <div>
       <Card className="flex flex-row">
-        <ProjectInfoCard className="mr-24" />
-        <ProjectStats data={data && formatTaskData(data)} />
+        <ProjectInfoCard className="mr-10"/>
+        <ProjectStats data={data && formatTaskData(data)}/>
         <CustomAreaChart />
       </Card>
       <Card>
@@ -34,14 +34,14 @@ function Dashboard() {
           <div className="flex">
             <div className="w-52">
               <PrimaryButton>
-                <FaRegCalendarAlt className="h-6 w-6" />
+                <FaRegCalendarAlt className="w-6 h-6" />
                 <span className="mx-2">Schedule Event(5)</span>
-                <BsFillPlayFill className="h-4 w-4"/>
+                <BsFillPlayFill className="w-4 h-4"/>
               </PrimaryButton>
             </div>
             <div className="w-12 mr-5 ml-7">
               <PrimaryButton>
-                <GoSettings className="rotate-90 h-6 w-8" />
+                <GoSettings className="w-8 h-6 rotate-90" />
               </PrimaryButton>
             </div>
             <div className="w-40">

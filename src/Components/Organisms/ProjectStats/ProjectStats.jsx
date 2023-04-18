@@ -10,7 +10,7 @@ const ProjectStats = ({ data, isEndDivider = false }) => {
     setShowIndex(id + 1);
   };
   return (
-    <div className="flex items-center justify-between w-1/2">
+    <div className="flex items-center justify-between w-1/2 mx-10">
       {data &&
         data.map((item, index) => (
           <React.Fragment key={index}>
@@ -32,7 +32,7 @@ const ProjectStats = ({ data, isEndDivider = false }) => {
                 )}
               </div>
             </div>
-            <Divider />
+            {data && index !== data.length - 1 && <Divider />}
           </React.Fragment>
         ))}
     </div>
