@@ -18,7 +18,7 @@ export default {
       },
       iamgray: {
         DEFAULT: "#F6F6F6",
-        50: "#FFFFFF",
+        50: "#767676",
         100: "#FFFFFF",
         200: "#FFFFFF",
         300: "#FFFFFF",
@@ -34,6 +34,7 @@ export default {
         DEFAULT: "#0A0E1B",
         50: "#242424",
       },
+      iamwhite:"#FFFFFF"
     },
     extend: {},
   },
