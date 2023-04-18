@@ -1,10 +1,10 @@
 import { ProjectInfoCardContainer } from "./ProjectInfoCard.style";
 import { UserStack } from "../../Molecules";
-const ProjectInfoCard = () => {
+const ProjectInfoCard = ({className}) => {
   return (
-    <ProjectInfoCardContainer>
+    <ProjectInfoCardContainer className={className}>
       <div className="mb-1 text-3xl font-semibold text-iamblack">
-        Project Xpress
+        Project Name Here
       </div>
       <div className="mb-3 text-xs text-iamblack-50">Created on 01/01/2023</div>
       <div>
