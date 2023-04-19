@@ -34,6 +34,10 @@ export default {
         DEFAULT: "#0A0E1B",
         50: "#242424",
       },
+      iamred:{
+        DEFAULT: "#E31E24",
+        50: "",
+      },
       iamwhite:"#FFFFFF"
     },
     extend: {},

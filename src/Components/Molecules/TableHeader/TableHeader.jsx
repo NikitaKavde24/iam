@@ -38,7 +38,7 @@ export default function TableHeader() {
         </div>
         <div className="w-40">
           <PrimaryButton onButtonClick={()=>setIsShowAddTaskForm(true)} >Add Task</PrimaryButton>
-          <AddTaskForm isShowForm={isShowAddTaskForm}/>
+          <AddTaskForm isShowForm={isShowAddTaskForm} handleCancel={()=>setIsShowAddTaskForm(false)}/>
         </div>
       </div>
     </div>
