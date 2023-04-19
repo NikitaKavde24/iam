@@ -9,8 +9,8 @@ function Dashboard() {
   return (
     <div>
       <Card className="flex flex-row">
-        <ProjectInfoCard className="mr-24" />
-        <ProjectStats data={data && formatTaskData(data)} />
+        <ProjectInfoCard className="mr-10"/>
+        <ProjectStats data={data && formatTaskData(data)}/>
         <CustomAreaChart />
       </Card>
       <Card>
