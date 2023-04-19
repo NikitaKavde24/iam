@@ -1,4 +1,7 @@
 import React from "react";
+import { PrimaryButton } from "../Buttons/Buttons";
+import { ImPencil } from "react-icons/im";
+import Chip from "../Chip/Chip";
 import TableContainer from "./Table.style";
 
 const Table = ({ columns = tableColumns, data = sampleTableData }) => {
@@ -99,17 +102,39 @@ export const tableColumns = [
   {
     column: "Comment",
     label: "Comment",
-    cell:(row) => {
-      return <div className="p-2 border bg-iamblue border-iamblue-800"><input type='text'/></div>
-    }
+    cell: (row) => {
+      return (
+        <div className="w-[168px] flex justify-between border border-[#CEE3FC] h-10 rounded-[10px]">
+          <span className="flex items-center w-full ml-1 text-xs text-iamgray-50 leading-[17px">
+            Comment...
+          </span>
+          <button className="w-[37px] flex justify-center items-center border-l border-[#CEE3FC] rou">
+            {" "}
+            <ImPencil className="w-5 h-5 text-iamblue" />
+          </button>
+        </div>
+      );
+    },
   },
   {
     column: "Status",
     label: "Status",
+    cell: (row) => {
+      return <Chip status={row.Status}>{row.Status}</Chip>;
+    },
   },
   {
     column: "Actions",
     label: "Actions",
+    cell: (row) => {
+      return (
+        <div>
+          <PrimaryButton>
+            <ImPencil className="w-8 h-6" />
+          </PrimaryButton>
+        </div>
+      );
+    },
   },
 ];
 
@@ -120,7 +145,7 @@ export const sampleTableData = [
     "Ticket ID": "09865",
     "Project Name": "Xpress",
     Actions: "Edit/delete",
-    Status: "COmpleted",
+    Status: "Hold",
     Comment: "updated",
     "Actual TAT": "20:00",
     "Actual End Date": "Apr 06, 2023",
@@ -133,7 +158,7 @@ export const sampleTableData = [
     "Ticket ID": "09865",
     "Project Name": "Xpress",
     Actions: "Edit/delete",
-    Status: "COmpleted",
+    Status: "Hold",
     Comment: "updated",
     "Actual TAT": "20:00",
     "Actual End Date": "Apr 06, 2023",
@@ -146,7 +171,7 @@ export const sampleTableData = [
     "Ticket ID": "09865",
     "Project Name": "Xpress",
     Actions: "Edit/delete",
-    Status: "COmpleted",
+    Status: "Hold",
     Comment: "updated",
     "Actual TAT": "20:00",
     "Actual End Date": "Apr 06, 2023",
@@ -159,7 +184,7 @@ export const sampleTableData = [
     "Ticket ID": "09865",
     "Project Name": "Xpress",
     Actions: "Edit/delete",
-    Status: "COmpleted",
+    Status: "Done",
     Comment: "updated",
     "Actual TAT": "20:00",
     "Actual End Date": "Apr 06, 2023",
@@ -172,7 +197,7 @@ export const sampleTableData = [
     "Ticket ID": "09865",
     "Project Name": "Xpress",
     Actions: "Edit/delete",
-    Status: "COmpleted",
+    Status: "Done",
     Comment: "updated",
     "Actual TAT": "20:00",
     "Actual End Date": "Apr 06, 2023",
@@ -185,7 +210,7 @@ export const sampleTableData = [
     "Ticket ID": "09865",
     "Project Name": "Xpress",
     Actions: "Edit/delete",
-    Status: "COmpleted",
+    Status: "In Progress",
     Comment: "updated",
     "Actual TAT": "20:00",
     "Actual End Date": "Apr 06, 2023",
@@ -198,7 +223,7 @@ export const sampleTableData = [
     "Ticket ID": "09865",
     "Project Name": "Xpress",
     Actions: "Edit/delete",
-    Status: "COmpleted",
+    Status: "Done",
     Comment: "updated",
     "Actual TAT": "20:00",
     "Actual End Date": "Apr 06, 2023",
@@ -211,7 +236,7 @@ export const sampleTableData = [
     "Ticket ID": "09865",
     "Project Name": "Xpress",
     Actions: "Edit/delete",
-    Status: "COmpleted",
+    Status: "Done",
     Comment: "updated",
     "Actual TAT": "20:00",
     "Actual End Date": "Apr 06, 2023",
