@@ -14,10 +14,10 @@ const chipColors = {
 
 const TaskPopUpContainer = styled.div`
   position: absolute;
-  top: 20px;
+  top: 30px;
   z-index: 111;
   width: 327px;
-  height: 80%;
+  height: 70%;
   background: #ffffff;
   border-radius: 10px;
   border: 1px solid #cee3fc;

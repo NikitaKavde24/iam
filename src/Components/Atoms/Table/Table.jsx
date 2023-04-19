@@ -27,7 +27,7 @@ const Table = ({ columns = tableColumns, data = sampleTableData }) => {
                       key={`table-cell-${rowIndex}-${columnIndex}`}
                       className="px-2 py-6 text-iamblack"
                     >
-                      {column.cell(row, rowIndex === hoveredRow)}
+                      {column.cell(row)}
                     </td>
                   );
                 } else if (
@@ -99,6 +99,9 @@ export const tableColumns = [
   {
     column: "Comment",
     label: "Comment",
+    cell:(row) => {
+      return <div className="p-2 border bg-iamblue border-iamblue-800"><input type='text'/></div>
+    }
   },
   {
     column: "Status",
@@ -120,9 +123,9 @@ export const sampleTableData = [
     Status: "COmpleted",
     Comment: "updated",
     "Actual TAT": "20:00",
-    "Actual End Date": "23-Aipril-2023",
-    "Expected End Date": "23-Aipril-2023",
-    "Satrt Date": "23-Aipril-2023",
+    "Actual End Date": "Apr 06, 2023",
+    "Expected End Date": "Apr 06, 2023",
+    "Satrt Date": "Apr 06, 2023",
   },
   {
     "S.No": "01",
@@ -133,9 +136,9 @@ export const sampleTableData = [
     Status: "COmpleted",
     Comment: "updated",
     "Actual TAT": "20:00",
-    "Actual End Date": "23-Aipril-2023",
-    "Expected End Date": "23-Aipril-2023",
-    "Satrt Date": "23-Aipril-2023",
+    "Actual End Date": "Apr 06, 2023",
+    "Expected End Date": "Apr 06, 2023",
+    "Satrt Date": "Apr 06, 2023",
   },
   {
     "S.No": "01",
@@ -146,9 +149,9 @@ export const sampleTableData = [
     Status: "COmpleted",
     Comment: "updated",
     "Actual TAT": "20:00",
-    "Actual End Date": "23-Aipril-2023",
-    "Expected End Date": "23-Aipril-2023",
-    "Satrt Date": "23-Aipril-2023",
+    "Actual End Date": "Apr 06, 2023",
+    "Expected End Date": "Apr 06, 2023",
+    "Satrt Date": "Apr 06, 2023",
   },
   {
     "S.No": "01",
@@ -159,9 +162,9 @@ export const sampleTableData = [
     Status: "COmpleted",
     Comment: "updated",
     "Actual TAT": "20:00",
-    "Actual End Date": "23-Aipril-2023",
-    "Expected End Date": "23-Aipril-2023",
-    "Satrt Date": "23-Aipril-2023",
+    "Actual End Date": "Apr 06, 2023",
+    "Expected End Date": "Apr 06, 2023",
+    "Satrt Date": "Apr 06, 2023",
   },
   {
     "S.No": "01",
@@ -172,9 +175,9 @@ export const sampleTableData = [
     Status: "COmpleted",
     Comment: "updated",
     "Actual TAT": "20:00",
-    "Actual End Date": "23-Aipril-2023",
-    "Expected End Date": "23-Aipril-2023",
-    "Satrt Date": "23-Aipril-2023",
+    "Actual End Date": "Apr 06, 2023",
+    "Expected End Date": "Apr 06, 2023",
+    "Satrt Date": "Apr 06, 2023",
   },
   {
     "S.No": "01",
@@ -185,9 +188,9 @@ export const sampleTableData = [
     Status: "COmpleted",
     Comment: "updated",
     "Actual TAT": "20:00",
-    "Actual End Date": "23-Aipril-2023",
-    "Expected End Date": "23-Aipril-2023",
-    "Satrt Date": "23-Aipril-2023",
+    "Actual End Date": "Apr 06, 2023",
+    "Expected End Date": "Apr 06, 2023",
+    "Satrt Date": "Apr 06, 2023",
   },
   {
     "S.No": "01",
@@ -198,9 +201,9 @@ export const sampleTableData = [
     Status: "COmpleted",
     Comment: "updated",
     "Actual TAT": "20:00",
-    "Actual End Date": "23-Aipril-2023",
-    "Expected End Date": "23-Aipril-2023",
-    "Satrt Date": "23-Aipril-2023",
+    "Actual End Date": "Apr 06, 2023",
+    "Expected End Date": "Apr 06, 2023",
+    "Satrt Date": "Apr 06, 2023",
   },
   {
     "S.No": "01",
@@ -211,8 +214,8 @@ export const sampleTableData = [
     Status: "COmpleted",
     Comment: "updated",
     "Actual TAT": "20:00",
-    "Actual End Date": "23-Aipril-2023",
-    "Expected End Date": "23-Aipril-2023",
-    "Satrt Date": "23-Aipril-2023",
+    "Actual End Date": "Apr 06, 2023",
+    "Expected End Date": "Apr 06, 2023",
+    "Satrt Date": "Apr 06, 2023",
   },
 ];
