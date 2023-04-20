@@ -20,7 +20,8 @@ const TaskPopUpContainer = styled.div`
   height: 70%;
   background: #ffffff;
   border-radius: 10px;
-  border: 1px solid #cee3fc;
+  box-shadow: 0px 3px 6px #00000029;
+  border: 2px solid #cee3fc;
 `;
 
 const TaskChip = styled.div`
