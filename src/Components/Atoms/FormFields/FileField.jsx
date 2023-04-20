@@ -1,3 +1,4 @@
+import {HiPlus} from "react-icons/hi";
 const FileField = ({label,className}) => {
   //for search field height if fixed width is auto it will be based on parent.
   return (

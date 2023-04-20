@@ -8,3 +8,4 @@ export {default as SearchField} from "./FormFields/SearchField";
 export {default as TextField} from './FormFields/TextField';
 export {default as TextArea} from './FormFields/TextArea';
 export {default as FileField} from './FormFields/FileField';
+export {default as SelectField} from './FormFields/SelectField';
