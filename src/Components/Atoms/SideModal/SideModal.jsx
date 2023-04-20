@@ -26,7 +26,7 @@ export default function SideModal({
           >
             {/* Header */}
             {isHeader && (
-              <div className="mt-16" onClick={onBack}>
+              <div className="mt-7" onClick={onBack}>
                 <BiArrowBack className="w-6 h-6 ml-7" />
               </div>
             )}

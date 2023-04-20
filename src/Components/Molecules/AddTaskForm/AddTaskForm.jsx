@@ -50,7 +50,7 @@ export default function AddTaskForm({ isShowForm, handleCancel = () => {} }) {
             className={"w-[348px]"}
           />
         </div>
-        {/* row-2 */}
+        {/* row-3 */}
         <div className="flex mt-2 gap-7 justify-between">
           <TextField
             label={"Epic ID"}
@@ -79,7 +79,7 @@ export default function AddTaskForm({ isShowForm, handleCancel = () => {} }) {
             isAttachIcon={true}
           />
         </div>
-        {/* row-3 */}
+        {/* row-4 */}
         <div className="flex mt-2 gap-7 justify-between">
           <TextArea
             label={"Description"}
@@ -93,7 +93,7 @@ export default function AddTaskForm({ isShowForm, handleCancel = () => {} }) {
             className={"min-w-[507px]"}
           />
         </div>
-        {/* row-4 */}
+        {/* row-5 */}
         <div className="flex gap-10 mt-11 justify-end">
           <div className="w-[160px]">
             <PrimaryButton>Submit</PrimaryButton>
@@ -101,7 +101,7 @@ export default function AddTaskForm({ isShowForm, handleCancel = () => {} }) {
           <button
             onClick={handleCancel}
             type="button"
-            className="font-medium text-lg hover:underline text-iamblue mr-4"
+            className="font-medium text-lg underline text-iamblue mr-4"
           >
             Cancel
           </button>
