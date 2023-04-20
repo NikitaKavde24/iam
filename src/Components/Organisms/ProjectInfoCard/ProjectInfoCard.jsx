@@ -6,7 +6,7 @@ const ProjectInfoCard = ({className}) => {
       <div className="mb-1 text-3xl font-semibold text-iamblack">
         Project Name 
       </div>
-      <div className="mb-3 text-xs text-iamblack-50">Created on 01/01/2023</div>
+      <div className="mb-3 text-xs font-medium text-iamblack-50">Created on 01/01/2023</div>
       <div>
         <UserStack
           usersData={Data}
@@ -28,11 +28,11 @@ const Data = [
   "musicjunkie12",
   "bookworm42",
   "foodiegalore",
-  "adventureseeker99",
+  "Bdventureseeker99",
   "fitnessfanatic7",
-  "wanderlust22",
-  "artofwords11",
-  "cleverkitten",
+  "sanderlust22",
+  "rtofwords11",
+  "fleverkitten",
   "techguru23",
   "naturelover88",
   "cleverkitten",
@@ -61,5 +61,5 @@ const Data = [
   "adventureseeker99",
   "fitnessfanatic7",
   "wanderlust22",
-  "artofwords11",
+  "Wrtofwords11",
 ]
