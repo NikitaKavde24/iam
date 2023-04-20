@@ -16,6 +16,8 @@ import {
 import formatTaskData from "../../Helpers/formatTaskData";
 import TableHeader from "../../Components/Molecules/TableHeader/TableHeader";
 import { ImPencil } from "react-icons/im";
+import SideModal from "../../Components/Atoms/SideModal/SideModal";
+import EditTicketModal from "../../Components/Molecules/EditTicketModal/EditTicketModal";
 
 function Dashboard() {
   const [showCommentPanel, setShowCommentPannel] = useState(false);
@@ -54,7 +56,9 @@ function Dashboard() {
       column: "Comment",
       label: "Comment",
       cell: (row) => {
-        return <CommentButton data={row} CommentBody={<CommentCard data={row}/>} />;
+        return (
+          <CommentButton data={row} CommentBody={<CommentCard data={row} />} />
+        );
       },
     },
     {
@@ -226,6 +230,7 @@ function Dashboard() {
         <CustomAreaChart />
       </Card>
       <Card>
+       <EditTicketModal/>
         {/* table header start */}
         <TableHeader />
         {/* table header end */}
