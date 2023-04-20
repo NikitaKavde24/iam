@@ -8,7 +8,7 @@ const SideModalContainer = styled.div`
   justify-content: end;
   top: 0;
   left: 0;
-  background: #00000099;
+  background: rgb(0 0 0 / 18%);;
   z-index: 40;
   cursor: default;
 `;

@@ -21,6 +21,10 @@ import EditTicketModal from "../../Components/Molecules/EditTicketModal/EditTick
 
 function Dashboard() {
   const [showCommentPanel, setShowCommentPannel] = useState(false);
+  const [showEditModal, setShowEditModal] = useState(false);
+  const handleEdit = () => {
+    setShowEditModal(!showEditModal);
+  };
   const tableColumns = [
     { column: "S.No", label: "S.No" },
     { column: "Project Name", label: "Project Name" },
@@ -74,9 +78,10 @@ function Dashboard() {
       cell: (row) => {
         return (
           <div>
-            <PrimaryButton>
+            <PrimaryButton onButtonClick={handleEdit}>
               <ImPencil className="w-8 h-6" />
             </PrimaryButton>
+            <EditTicketModal isOpen={showEditModal} onBack={handleEdit}/>
           </div>
         );
       },
@@ -230,7 +235,6 @@ function Dashboard() {
         <CustomAreaChart />
       </Card>
       <Card>
-       <EditTicketModal/>
         {/* table header start */}
         <TableHeader />
         {/* table header end */}
