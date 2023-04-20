@@ -1,7 +1,13 @@
-import { FileField, PrimaryButton, TextArea, TextField } from "../../Atoms";
+import {
+  FileField,
+  PrimaryButton,
+  SelectField,
+  TextArea,
+  TextField,
+} from "../../Atoms";
 import Modal from "../../Atoms/Modal/Modal";
 
-export default function AddTaskForm({ isShowForm,handleCancel=()=>{} }) {
+export default function AddTaskForm({ isShowForm, handleCancel = () => {} }) {
   return (
     <Modal isOpen={isShowForm} isHeader={true} headerText={"Adding Task"}>
       {/* modal body */}
@@ -15,13 +21,18 @@ export default function AddTaskForm({ isShowForm,handleCancel=()=>{} }) {
             Created on 01/01/2023
           </div>
         </div>
-          {/* row-2 */}
+        {/* row-2 */}
         <div className="flex mt-8 gap-7 justify-between">
-          <TextField
+          {/* <TextField
             label={"Task Category"}
             placeholder={"Select Task Type"}
             className={"w-[348px]"}
             error={" "}
+          /> */}
+          <SelectField
+            label={"Task Category"}
+            placeholder={"Select Task Type"}
+            className={"w-[348px]"}
           />
           <TextField
             label={"Feature Name"}
@@ -39,13 +50,12 @@ export default function AddTaskForm({ isShowForm,handleCancel=()=>{} }) {
             className={"w-[348px]"}
           />
         </div>
-         {/* row-2 */}
+        {/* row-2 */}
         <div className="flex mt-2 gap-7 justify-between">
           <TextField
             label={"Epic ID"}
             placeholder={"Epic ID"}
             className={"min-w-[348px]"}
-            error={"error"}
           />
           <TextField
             label={"Estimated Hours."}
@@ -66,17 +76,35 @@ export default function AddTaskForm({ isShowForm,handleCancel=()=>{} }) {
             label={"Attach Link"}
             placeholder={"Paste Here"}
             className={"min-w-[301px]"}
+            isAttachIcon={true}
           />
         </div>
         {/* row-3 */}
         <div className="flex mt-2 gap-7 justify-between">
-            <TextArea label={"Description"} placeholder={"Description"} charLimit={"340"}  className={"min-w-[824px]"}/>
-            <FileField label={"Attachments"} placeholder={"Upload Screenshots or Doc, PPT"} className={"min-w-[507px]"}/>
+          <TextArea
+            label={"Description"}
+            placeholder={"Description"}
+            charLimit={"340"}
+            className={"min-w-[824px]"}
+          />
+          <FileField
+            label={"Attachments"}
+            placeholder={"Upload Screenshots or Doc, PPT"}
+            className={"min-w-[507px]"}
+          />
         </div>
         {/* row-4 */}
         <div className="flex gap-10 mt-11 justify-end">
-            <div className="w-[160px]"><PrimaryButton>Submit</PrimaryButton></div>
-            <button onClick={handleCancel} type="button" className="font-medium text-lg hover:underline text-iamblue mr-4">Cancel</button>
+          <div className="w-[160px]">
+            <PrimaryButton>Submit</PrimaryButton>
+          </div>
+          <button
+            onClick={handleCancel}
+            type="button"
+            className="font-medium text-lg hover:underline text-iamblue mr-4"
+          >
+            Cancel
+          </button>
         </div>
       </div>
     </Modal>
