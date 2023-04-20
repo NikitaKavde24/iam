@@ -25,7 +25,7 @@ const SelectField = ({ label, className, placeholder }) => {
           onClick={handleClick}
         >
           <span className="text-sm font-medium leading-[17px] text-iamgray-50">
-            {placeholder}
+            Placeholder
           </span>
           <IoIosArrowDown className="text-iamblack-50" />
         </div>

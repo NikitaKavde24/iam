@@ -18,8 +18,8 @@ const TaskPopUp = ({ data }) => {
   return (
     <TaskPopUpContainer>
       <div className="flex items-center justify-center w-full gap-2 h-1/2">
-        <div className="text-sm font-semibold">{getTaskKey(data)}</div>
-        <div className="text-4xl font-semibold">
+        <div className="text-[16px] font-semibold">{getTaskKey(data)}</div>
+        <div className="text-[34px] font-semibold">
           {data && data[getTaskKey(data)]["total"]}
         </div>
       </div>
@@ -29,12 +29,12 @@ const TaskPopUp = ({ data }) => {
             key={index}
             className="flex flex-col items-center justify-center"
           >
-            <div className="text-2xl font-medium text-iamblack-50">
+            <div className="text-[22px] font-medium text-iamblack-50">
               {Object.values(item)[0]}
             </div>
             <div className="flex items-center gap-1">
               <TaskChip color={Object.keys(item)[0]} />
-              <div className="capitalize">{Object.keys(item)[0]}</div>
+              <div className="text-[12px] capitalize">{Object.keys(item)[0]}</div>
             </div>
           </div>
         ))}

@@ -1,6 +1,6 @@
 import React from "react";
 import TableContainer from "./Table.style";
-
+import { TiArrowUnsorted } from "react-icons/ti";
 const Table = ({ columns, data }) => {
   return (
     <TableContainer>
@@ -9,10 +9,20 @@ const Table = ({ columns, data }) => {
           <tr>
             {columns.map((column, columnIndex) => (
               <th
-                className="py-6 border-opacity-25 border-solid text-iamblack border-y border-iamblue"
+                className="px-3 py-6 border-opacity-25 border-solid text-iamblack border-y border-iamblue"
                 key={columnIndex}
               >
-                {column.label}
+                {/* {column.label} */}
+
+                <div className="flex items-center justify-center gap-1">
+                  {column.breakWord ? (
+                    <div>{breakSpaceString(column.label)}</div>
+                  ) : (
+                    column.label
+                  )}
+                  {/* <div>{breakSpaceString(column.label)}</div> */}
+                  <TiArrowUnsorted className="text-iamblue-400 " />
+                </div>
               </th>
             ))}
           </tr>
@@ -65,3 +75,16 @@ const Table = ({ columns, data }) => {
 
 export default Table;
 
+const breakSpaceString = (str) => {
+  let words = str.trim().split(" ");
+  if (words.length < 2) {
+    return str;
+  } else {
+    return (
+      <>
+        <div>{words[0]}</div>
+        <div>{words.slice(1).join(" ")}</div>
+      </>
+    );
+  }
+};

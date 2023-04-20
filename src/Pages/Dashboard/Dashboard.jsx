@@ -27,7 +27,7 @@ function Dashboard() {
   };
   const tableColumns = [
     { column: "S.No", label: "S.No" },
-    { column: "Project Name", label: "Project Name" },
+    { column: "Project Name", label: "Project Name", breakWord: true },
     {
       column: "Ticket ID",
       label: "Ticket ID",
@@ -35,6 +35,7 @@ function Dashboard() {
     {
       column: "Sub Ticket ID",
       label: "Sub Ticket ID",
+      breakWord: true,
     },
     {
       column: "Description",
@@ -47,14 +48,22 @@ function Dashboard() {
     {
       column: "Expected End Date",
       label: "Expected End Date",
+      breakWord: true,
     },
     {
       column: "Actual End Date",
       label: "Actual End Date",
+      breakWord: true,
+    },
+    {
+      column: "Expected TAT",
+      label: "Expected TAT",
+      breakWord: true,
     },
     {
       column: "Actual TAT",
       label: "Actual TAT",
+      breakWord:true
     },
     {
       column: "Comment",
@@ -81,7 +90,7 @@ function Dashboard() {
             <PrimaryButton onButtonClick={handleEdit}>
               <ImPencil className="w-8 h-6" />
             </PrimaryButton>
-            <EditTicketModal isOpen={showEditModal} onBack={handleEdit}/>
+            <EditTicketModal isOpen={showEditModal} onBack={handleEdit} />
           </div>
         );
       },
@@ -90,7 +99,7 @@ function Dashboard() {
 
   const sampleTableData = [
     {
-      "S.No": "01",
+      "S.No": "1",
       Description: "This is some description",
       "Ticket ID": "09865",
       "Project Name": "Xpress",
@@ -103,7 +112,7 @@ function Dashboard() {
       "Satrt Date": "Apr 06, 2023",
     },
     {
-      "S.No": "02",
+      "S.No": "2",
       Description: "This is some description",
       "Ticket ID": "09865",
       "Project Name": "Xpress",
@@ -116,7 +125,7 @@ function Dashboard() {
       "Satrt Date": "Apr 06, 2023",
     },
     {
-      "S.No": "03",
+      "S.No": "3",
       Description: "This is some description",
       "Ticket ID": "09865",
       "Project Name": "Xpress",
@@ -129,7 +138,7 @@ function Dashboard() {
       "Satrt Date": "Apr 06, 2023",
     },
     {
-      "S.No": "04",
+      "S.No": "4",
       Description: "This is some description",
       "Ticket ID": "09865",
       "Project Name": "Xpress",
@@ -142,7 +151,7 @@ function Dashboard() {
       "Satrt Date": "Apr 06, 2023",
     },
     {
-      "S.No": "05",
+      "S.No": "5",
       Description: "This is some description",
       "Ticket ID": "09865",
       "Project Name": "Xpress",
@@ -155,7 +164,7 @@ function Dashboard() {
       "Satrt Date": "Apr 06, 2023",
     },
     {
-      "S.No": "06",
+      "S.No": "6",
       Description: "This is some description",
       "Ticket ID": "09865",
       "Project Name": "Xpress",
@@ -168,7 +177,7 @@ function Dashboard() {
       "Satrt Date": "Apr 06, 2023",
     },
     {
-      "S.No": "07",
+      "S.No": "7",
       Description: "This is some description",
       "Ticket ID": "09865",
       "Project Name": "Xpress",
@@ -181,7 +190,7 @@ function Dashboard() {
       "Satrt Date": "Apr 06, 2023",
     },
     {
-      "S.No": "08",
+      "S.No": "8",
       Description: "This is some description",
       "Ticket ID": "09865",
       "Project Name": "Xpress",
@@ -212,7 +221,7 @@ function Dashboard() {
         total: 4,
       },
       InProgress_tasks: {
-        low: 100,
+        low: 3,
         high: 0,
         medium: 1,
         complex: 2,

@@ -13,16 +13,16 @@ export default function AddTaskForm({ isShowForm, handleCancel = () => {} }) {
       {/* modal body */}
       <div className="flex flex-col px-[30px]">
         {/* row-1 */}
-        <div className="mt-8">
+        <div className="mt-10">
           <div className="text-[30px] font-semibold text-left leading-[17px] text-iamblack">
             Project Xpress
           </div>
-          <div className="text-xs text-left leading-[17px] text-iamblack-50 mt-2">
-            Created on 01/01/2023
+          <div className="text-xs text-left leading-[17px] text-iamblack-50 mt-4 font-medium">
+            Created on April 20, 2023
           </div>
         </div>
         {/* row-2 */}
-        <div className="flex mt-8 gap-7 justify-between">
+        <div className="flex justify-between mt-12 gap-7">
           {/* <TextField
             label={"Task Category"}
             placeholder={"Select Task Type"}
@@ -50,8 +50,8 @@ export default function AddTaskForm({ isShowForm, handleCancel = () => {} }) {
             className={"w-[348px]"}
           />
         </div>
-        {/* row-3 */}
-        <div className="flex mt-2 gap-7 justify-between">
+        {/* row-2 */}
+        <div className="flex justify-between mt-8 gap-7">
           <TextField
             label={"Epic ID"}
             placeholder={"Epic ID"}
@@ -79,8 +79,8 @@ export default function AddTaskForm({ isShowForm, handleCancel = () => {} }) {
             isAttachIcon={true}
           />
         </div>
-        {/* row-4 */}
-        <div className="flex mt-2 gap-7 justify-between">
+        {/* row-3 */}
+        <div className="flex justify-between mt-8 gap-7">
           <TextArea
             label={"Description"}
             placeholder={"Description"}
@@ -93,15 +93,15 @@ export default function AddTaskForm({ isShowForm, handleCancel = () => {} }) {
             className={"min-w-[507px]"}
           />
         </div>
-        {/* row-5 */}
-        <div className="flex gap-10 mt-11 justify-end">
+        {/* row-4 */}
+        <div className="flex justify-end gap-10 mt-11">
           <div className="w-[160px]">
             <PrimaryButton>Submit</PrimaryButton>
           </div>
           <button
             onClick={handleCancel}
             type="button"
-            className="font-medium text-lg underline text-iamblue mr-4"
+            className="mr-4 text-lg font-medium hover:underline text-iamblue"
           >
             Cancel
           </button>

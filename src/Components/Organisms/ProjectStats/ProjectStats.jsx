@@ -24,7 +24,7 @@ const ProjectStats = ({ data, isEndDivider = false }) => {
                   {item[Object.keys(item)[0]]["total"] &&
                     item[Object.keys(item)[0]]["total"]}
                 </div>
-                <div className="mb-6 text-sm font-semibold text-iamblack">
+                <div className="mb-6 text-[16px] font-semibold text-iamblack">
                   {Object.keys(item)[0] && Object.keys(item)[0]}
                 </div>
                 {show && showIndex && showIndex === index + 1 && (

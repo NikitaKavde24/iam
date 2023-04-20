@@ -1,6 +1,6 @@
 import { CommentCardContainer } from "./CommentCard.style";
 const CommentCard = ({ data }) => {
-  return <CommentCardContainer>{JSON.stringify(data)}</CommentCardContainer>;
+  return <CommentCardContainer>Comment pannel will appear here</CommentCardContainer>;
 };
 
 export default CommentCard;
