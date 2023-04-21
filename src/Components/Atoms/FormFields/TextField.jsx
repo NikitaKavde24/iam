@@ -12,7 +12,7 @@ export default function TextField({
         <label className="text-lg font-medium leading-[17px] text-left text-iamblue ">
           {label}
         </label>
-        {isAttachIcon && <IoMdAttach className="w-[21px] ml-1 text-iamblue" />}
+        {isAttachIcon && <IoMdAttach className="w-[21px] mt-0.5 text-iamblue" />}
       </div>
 
       <div

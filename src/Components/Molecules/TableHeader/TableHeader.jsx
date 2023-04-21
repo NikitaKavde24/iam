@@ -2,7 +2,7 @@ import React from "react";
 import { GoSettings } from "react-icons/go";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { BsFillPlayFill } from "react-icons/bs";
-import { PrimaryButton, SearchField } from "../../Atoms";
+import { PrimaryButton, SearchField, SelectField } from "../../Atoms";
 import { useState } from "react";
 import AddTaskForm from "../AddTaskForm/AddTaskForm";
 
@@ -22,6 +22,7 @@ export default function TableHeader() {
             }}
           />
         </div>
+        <SelectField/>
       </div>
       <div className="flex">
         <div className="w-52">
