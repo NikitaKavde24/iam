@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Table,
   Card,
@@ -18,8 +18,13 @@ import TableHeader from "../../Components/Molecules/TableHeader/TableHeader";
 import { ImPencil } from "react-icons/im";
 import SideModal from "../../Components/Atoms/SideModal/SideModal";
 import EditTicketModal from "../../Components/Molecules/EditTicketModal/EditTicketModal";
+import { getAllTasks } from "../../Services/API/tasks/tasks";
 
 function Dashboard() {
+  const getData = (payload) =>{
+    
+    getAllTasks()
+  }
   const [showCommentPanel, setShowCommentPannel] = useState(false);
   const [showEditModal, setShowEditModal] = useState(false);
   const handleEdit = () => {
